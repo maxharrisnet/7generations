@@ -101,6 +101,21 @@ h3 {
 	margin: var(--spacing-m) 0;
 }
 
+p {
+	font-size: var(--font-size-m);
+	line-height: var(--line-height-m);
+	margin: var(--spacing-s) 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
 .wrapper {
 	margin: 0 auto;
 	max-width: var(--wrapper-max-width);
@@ -141,4 +156,73 @@ nav ul li {
 nav ul li a {
 	color: var(--color-off-white);
 	text-decoration: none;
+}
+
+.section-highlight {
+	background-color: var(--color-purple);
+	color: var(--color-off-white);
+	padding: var(--spacing-m);
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--color-purple);
+	color: var(--color-off-white);
+	padding: var(--spacing-xxl) var(--spacing-s);
+	text-align: center;
+	min-height: 70vh;
+}
+
+.hero .wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-banner {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	transform-origin: 50% 50%;
+	overflow: hidden;
+	height: 100px;
+}
+
+.left-banner {
+	transform: rotate(-20deg);
+}
+
+.right-banner {
+	transform: rotate(20deg);
+}
+
+.hero-banner li {
+	opacity: 0;
+	position: absolute;
+	white-space: nowrap;
+}
+
+/*  Phone and Larger */
+@media screen and (min-width: 375px) {
+	.hero {
+		padding: var(--spacing-xxl) var(--spacing-xs);
+	}
+}
+
+/* Tablet & Larger */
+@media screen and (min-width: 768px) {
+	.hero {
+		padding: var(--spacing-xxl) var(--spacing-m);
+	}
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+	.hero {
+		padding: var(--spacing-xxl) var(--spacing-l);
+	}
 }
