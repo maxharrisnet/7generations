@@ -182,28 +182,57 @@ nav ul li a {
 	align-items: center;
 }
 
+.hero-banner-wrapper {
+	position: relative;
+	height: 300px;
+}
+
 .hero-banner {
+	background-color: var(--color-light-grey);
 	position: absolute;
-	top: 50%;
+	display: flex;
+	justify-content: center;
+	top: 0%;
 	width: 100%;
 	text-align: center;
-	transform-origin: 50% 50%;
+	/* transform-origin: 50% 50%; */
+	color: var(--color-charcoal);
 	overflow: hidden;
 	height: 100px;
+	z-index: 10;
+}
+
+.hero-banner ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 }
 
 .left-banner {
-	transform: rotate(-20deg);
+	transform: rotate(-4deg);
 }
 
 .right-banner {
-	transform: rotate(20deg);
+	transform: rotate(4deg);
 }
 
 .hero-banner li {
 	opacity: 0;
 	position: absolute;
 	white-space: nowrap;
+	font-size: var(--font-size-xxl);
+	font-weight: var(--font-weight-bold);
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }
 
 /*  Phone and Larger */
