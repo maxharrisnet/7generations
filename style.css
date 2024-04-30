@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	/* Fonts */
+	--font-heading: "Roboto", sans-serif;
+	--font-body: "Open Sans", sans-serif;
+
+	/* Colors */
+	--color-off-white: #fbf5ff;
+	--color-purple: #893dec;
+	--color-purple-dark: #493a55;
+	--color-purple-light: #8e46ed;
+	--color-charcoal: #141010;
+	--color-dark-grey: #2b2b2b;
+	--color-light-grey: #c6c0ca;
+
+	/* Spacing */
+	--spacing-xxs: 0.25rem;
+	--spacing-xs: 0.5rem;
+	--spacing-s: 1rem;
+	--spacing-m: 1.5rem;
+	--spacing-l: 2rem;
+	--spacing-xl: 3rem;
+	--spacing-xxl: 4rem;
+
+	/* Border radius */
+	--border-radius-small: 0.25rem;
+	--border-radius-medium: 0.5rem;
+	--border-radius-large: 1rem;
+
+	/* Wrapper */
+	--wrapper-max-width: 120rem;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: var(--font-body);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
