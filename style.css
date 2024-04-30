@@ -4,8 +4,18 @@
 
 :root {
 	/* Fonts */
-	--font-heading: "Roboto", sans-serif;
-	--font-body: "Open Sans", sans-serif;
+	/* --font-heading: "Roboto", sans-serif;
+	--font-body: "Open Sans", sans-serif; */
+	--font-marmelad: "Marmelad", sans-serif;
+	/* normal version */
+	--font-lex-exa: "Lexend Exa", sans-serif;
+	/* stretched version */
+	--font-lex-zet: "Lexend Zetta", sans-serif;
+
+	/* text Heading, Sub heading, body */
+	--font-heading: var(--font-lex-zet);
+	--font-sub-heading: var(--font-marmelad);
+	--font-body: var(--font-marmelad);
 
 	/* Font Sizes */
 	--font-size-xxs: 1.2rem;
