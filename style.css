@@ -167,7 +167,7 @@ header {
 }
 
 .header-wrapper img {
-	padding-right: 20px;
+	padding-right: var(--spacing-m);
 }
 
 .header-wrapper .logo-text {
