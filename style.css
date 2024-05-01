@@ -224,6 +224,7 @@ nav ul li a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-top: 80px;
 }
 
 .hero h1 {
@@ -274,6 +275,10 @@ nav ul li a {
 	font-size: var(--font-size-xxl);
 	font-weight: var(--font-weight-bold);
 	font-family: var(--font-lex-zet);
+}
+
+.mission {
+	padding-bottom: 150px;
 }
 
 /* Details */
