@@ -370,6 +370,21 @@ details p {
 	text-align: left;
 }
 
+/* case study */
+.case-study h2 {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.case-study img {
+	width: 50%;
+}
+
+.text-align {
+	text-align: center;
+	margin: 0 auto;
+}
+
 .team-members {
 	display: flex;
 	flex-wrap: wrap;
