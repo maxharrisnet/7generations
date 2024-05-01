@@ -166,6 +166,10 @@ header {
 	border-radius: var(--border-radius-full);
 }
 
+.header-wrapper img {
+	padding-right: var(--spacing-m);
+}
+
 .header-wrapper .logo-text {
 	font-size: var(--font-size-l);
 	font-family: var(--font-lex-zet);
@@ -287,6 +291,10 @@ nav ul li a {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.mission {
+	padding-bottom: 150px;
 }
 
 /* Details */
