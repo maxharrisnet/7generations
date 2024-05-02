@@ -24,10 +24,15 @@
 <body>
   <header>
     <div class="header-wrapper">
-      <img src="./assets/logo/turt-logo.svg" alt="Tech Turtle logo">
+      <img src="./assets/logo/globe.svg" class="logo" alt="Globe logo">
       <span class="logo-text">Turtle Island <br> Web Development</span>
-      <nav>
-        <ul>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav id="mobile-nav">
+        <ul class="nav-items">
           <li><a href="#mission">Mission</a></li>
           <li><a href="#approach">Approach</a></li>
           <li><a href="#team">Team</a></li>
@@ -96,41 +101,72 @@
       </div>
       <div class="details-wrapper">
         <details>
-          <summary><span>Web Design</span><img src="./assets/svgs/arrow-right.svg" alt="arrow icon" /></summary>
+          <summary>
+            <span>Web Design</span>
+            <svg width="68" height="68" class="icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 33.979C0.001 52.746 15.214 67.959 33.979 67.959C52.746 67.959 67.959 52.746 67.959 33.979C67.959 15.214 52.745 0.001 33.978 0C15.213 0 0.001 15.214 0 33.979ZM56.114 36.315C56.081 36.359 56.049 36.403 56.012 36.445C55.948 36.523 55.877 36.601 55.8 36.677C55.799 36.68 55.795 36.683 55.793 36.685L38.815 53.664C37.321 55.158 34.901 55.158 33.407 53.664C31.915 52.171 31.915 49.75 33.407 48.258L43.864 37.803H14.866C12.755 37.803 11.042 36.091 11.042 33.979C11.042 31.869 12.755 30.157 14.866 30.157H43.864L33.409 19.701C31.915 18.209 31.915 15.787 33.409 14.293C34.901 12.802 37.321 12.802 38.813 14.293L55.795 31.276C55.877 31.357 55.948 31.436 56.015 31.519C56.045 31.552 56.073 31.588 56.1 31.623C56.121 31.65 56.145 31.681 56.162 31.71C56.634 32.345 56.914 33.126 56.916 33.979C56.914 34.833 56.633 35.617 56.161 36.253C56.147 36.274 56.13 36.294 56.114 36.315Z" fill="black" />
+            </svg>
+          </summary>
           <p>Crafting visually stunning and user-friendly websites that effectively communicate your message and captivate your audience.</p>
         </details>
 
         <details>
-          <summary>Web Development</summary>
+          <summary>
+            <span>Web Development</span>
+            <svg width="68" height="68" class="icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 33.979C0.001 52.746 15.214 67.959 33.979 67.959C52.746 67.959 67.959 52.746 67.959 33.979C67.959 15.214 52.745 0.001 33.978 0C15.213 0 0.001 15.214 0 33.979ZM56.114 36.315C56.081 36.359 56.049 36.403 56.012 36.445C55.948 36.523 55.877 36.601 55.8 36.677C55.799 36.68 55.795 36.683 55.793 36.685L38.815 53.664C37.321 55.158 34.901 55.158 33.407 53.664C31.915 52.171 31.915 49.75 33.407 48.258L43.864 37.803H14.866C12.755 37.803 11.042 36.091 11.042 33.979C11.042 31.869 12.755 30.157 14.866 30.157H43.864L33.409 19.701C31.915 18.209 31.915 15.787 33.409 14.293C34.901 12.802 37.321 12.802 38.813 14.293L55.795 31.276C55.877 31.357 55.948 31.436 56.015 31.519C56.045 31.552 56.073 31.588 56.1 31.623C56.121 31.65 56.145 31.681 56.162 31.71C56.634 32.345 56.914 33.126 56.916 33.979C56.914 34.833 56.633 35.617 56.161 36.253C56.147 36.274 56.13 36.294 56.114 36.315Z" fill="black" />
+            </svg>
+          </summary>
           <p>Building fast, secure, and scalable websites that meet your unique needs and goals, using cutting-edge technologies and best practices.</p>
         </details>
 
         <details>
-          <summary>Content Strategy</summary>
+          <summary><span>Content Strategy</span>
+            <svg width="68" height="68" class="icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 33.979C0.001 52.746 15.214 67.959 33.979 67.959C52.746 67.959 67.959 52.746 67.959 33.979C67.959 15.214 52.745 0.001 33.978 0C15.213 0 0.001 15.214 0 33.979ZM56.114 36.315C56.081 36.359 56.049 36.403 56.012 36.445C55.948 36.523 55.877 36.601 55.8 36.677C55.799 36.68 55.795 36.683 55.793 36.685L38.815 53.664C37.321 55.158 34.901 55.158 33.407 53.664C31.915 52.171 31.915 49.75 33.407 48.258L43.864 37.803H14.866C12.755 37.803 11.042 36.091 11.042 33.979C11.042 31.869 12.755 30.157 14.866 30.157H43.864L33.409 19.701C31.915 18.209 31.915 15.787 33.409 14.293C34.901 12.802 37.321 12.802 38.813 14.293L55.795 31.276C55.877 31.357 55.948 31.436 56.015 31.519C56.045 31.552 56.073 31.588 56.1 31.623C56.121 31.65 56.145 31.681 56.162 31.71C56.634 32.345 56.914 33.126 56.916 33.979C56.914 34.833 56.633 35.617 56.161 36.253C56.147 36.274 56.13 36.294 56.114 36.315Z" fill="black" />
+            </svg>
+          </summary>
           <p>Developing a comprehensive plan to create, manage, and distribute valuable content that resonates with your audience and drives business results.</p>
         </details>
 
         <details>
-          <summary>SEO</summary>
+          <summary><span>SEO</span>
+            <svg width="68" height="68" class="icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 33.979C0.001 52.746 15.214 67.959 33.979 67.959C52.746 67.959 67.959 52.746 67.959 33.979C67.959 15.214 52.745 0.001 33.978 0C15.213 0 0.001 15.214 0 33.979ZM56.114 36.315C56.081 36.359 56.049 36.403 56.012 36.445C55.948 36.523 55.877 36.601 55.8 36.677C55.799 36.68 55.795 36.683 55.793 36.685L38.815 53.664C37.321 55.158 34.901 55.158 33.407 53.664C31.915 52.171 31.915 49.75 33.407 48.258L43.864 37.803H14.866C12.755 37.803 11.042 36.091 11.042 33.979C11.042 31.869 12.755 30.157 14.866 30.157H43.864L33.409 19.701C31.915 18.209 31.915 15.787 33.409 14.293C34.901 12.802 37.321 12.802 38.813 14.293L55.795 31.276C55.877 31.357 55.948 31.436 56.015 31.519C56.045 31.552 56.073 31.588 56.1 31.623C56.121 31.65 56.145 31.681 56.162 31.71C56.634 32.345 56.914 33.126 56.916 33.979C56.914 34.833 56.633 35.617 56.161 36.253C56.147 36.274 56.13 36.294 56.114 36.315Z" fill="black" />
+            </svg>
+          </summary>
           <p>Optimizing your website and online presence to increase visibility, drive more traffic, and reach the top of search engine rankings.</p>
         </details>
 
         <details>
-          <summary>Accessibility</summary>
+          <summary><span>Accessibility</span>
+            <svg width="68" height="68" class="icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 33.979C0.001 52.746 15.214 67.959 33.979 67.959C52.746 67.959 67.959 52.746 67.959 33.979C67.959 15.214 52.745 0.001 33.978 0C15.213 0 0.001 15.214 0 33.979ZM56.114 36.315C56.081 36.359 56.049 36.403 56.012 36.445C55.948 36.523 55.877 36.601 55.8 36.677C55.799 36.68 55.795 36.683 55.793 36.685L38.815 53.664C37.321 55.158 34.901 55.158 33.407 53.664C31.915 52.171 31.915 49.75 33.407 48.258L43.864 37.803H14.866C12.755 37.803 11.042 36.091 11.042 33.979C11.042 31.869 12.755 30.157 14.866 30.157H43.864L33.409 19.701C31.915 18.209 31.915 15.787 33.409 14.293C34.901 12.802 37.321 12.802 38.813 14.293L55.795 31.276C55.877 31.357 55.948 31.436 56.015 31.519C56.045 31.552 56.073 31.588 56.1 31.623C56.121 31.65 56.145 31.681 56.162 31.71C56.634 32.345 56.914 33.126 56.916 33.979C56.914 34.833 56.633 35.617 56.161 36.253C56.147 36.274 56.13 36.294 56.114 36.315Z" fill="black" />
+            </svg>
+          </summary>
           <p>Ensuring that your website is usable by everyone, including people with disabilities, by following Web Content Accessibility Guidelines (WCAG 2.1) and best practices.</p>
         </details>
 
         <details>
-          <summary>Website Maintenance</summary>
+          <summary><span>Website Maintenance</span>
+            <svg width="68" height="68" class="icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 33.979C0.001 52.746 15.214 67.959 33.979 67.959C52.746 67.959 67.959 52.746 67.959 33.979C67.959 15.214 52.745 0.001 33.978 0C15.213 0 0.001 15.214 0 33.979ZM56.114 36.315C56.081 36.359 56.049 36.403 56.012 36.445C55.948 36.523 55.877 36.601 55.8 36.677C55.799 36.68 55.795 36.683 55.793 36.685L38.815 53.664C37.321 55.158 34.901 55.158 33.407 53.664C31.915 52.171 31.915 49.75 33.407 48.258L43.864 37.803H14.866C12.755 37.803 11.042 36.091 11.042 33.979C11.042 31.869 12.755 30.157 14.866 30.157H43.864L33.409 19.701C31.915 18.209 31.915 15.787 33.409 14.293C34.901 12.802 37.321 12.802 38.813 14.293L55.795 31.276C55.877 31.357 55.948 31.436 56.015 31.519C56.045 31.552 56.073 31.588 56.1 31.623C56.121 31.65 56.145 31.681 56.162 31.71C56.634 32.345 56.914 33.126 56.916 33.979C56.914 34.833 56.633 35.617 56.161 36.253C56.147 36.274 56.13 36.294 56.114 36.315Z" fill="black" />
+            </svg>
+          </summary>
           <p>Ongoing support and updates to keep your website secure, fast, and relevant, including regular backups, security checks, and performance monitoring.</p>
         </details>
 
         <details>
-          <summary>Training & Support</summary>
+          <summary><span>Training & Support</span>
+            <svg width="68" height="68" class="icon" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 33.979C0.001 52.746 15.214 67.959 33.979 67.959C52.746 67.959 67.959 52.746 67.959 33.979C67.959 15.214 52.745 0.001 33.978 0C15.213 0 0.001 15.214 0 33.979ZM56.114 36.315C56.081 36.359 56.049 36.403 56.012 36.445C55.948 36.523 55.877 36.601 55.8 36.677C55.799 36.68 55.795 36.683 55.793 36.685L38.815 53.664C37.321 55.158 34.901 55.158 33.407 53.664C31.915 52.171 31.915 49.75 33.407 48.258L43.864 37.803H14.866C12.755 37.803 11.042 36.091 11.042 33.979C11.042 31.869 12.755 30.157 14.866 30.157H43.864L33.409 19.701C31.915 18.209 31.915 15.787 33.409 14.293C34.901 12.802 37.321 12.802 38.813 14.293L55.795 31.276C55.877 31.357 55.948 31.436 56.015 31.519C56.045 31.552 56.073 31.588 56.1 31.623C56.121 31.65 56.145 31.681 56.162 31.71C56.634 32.345 56.914 33.126 56.916 33.979C56.914 34.833 56.633 35.617 56.161 36.253C56.147 36.274 56.13 36.294 56.114 36.315Z" fill="black" />
+            </svg>
+          </summary>
           <p>Empowering you and your team with the skills and knowledge to manage and update your website, with personalized training and ongoing support.</p>
         </details>
       </div>
     </div>
+  </section>
   </section>
   <section>
     <div class="section-row wrapper">
@@ -204,6 +240,15 @@
             <div class="person-text">
               <h3>Charli Ballantyne</h3>
               <p>Full Stack Development</p>
+            </div>
+          </li>
+          <li class="person picture-right">
+            <div class="image-wrapper">
+              <img src="./assets/svgs/globe.svg" alt="Globe" />
+            </div>
+            <div class="person-text">
+              <h3>Connected</h3>
+              <p>Our distrubtuted team is connect through technology. Thanks for checking us out!</p>
             </div>
           </li>
         </ul>

@@ -159,17 +159,19 @@ header {
 	max-width: var(--wrapper-max-width);
 	margin: 0 auto;
 	padding: var(--spacing-m) var(--spacing-l);
+	position: relative;
 	justify-content: space-between;
 	align-items: center;
+	text-align: center;
 	border-radius: var(--border-radius-full);
 }
 
-.header-wrapper img {
-	padding-right: var(--spacing-m);
+.header-wrapper .logo {
+	fill: var(--color-off-white) !important;
 }
 
 .header-wrapper .logo-text {
-	font-size: var(--font-size-l);
+	font-size: var(--font-size-s);
 	font-family: var(--font-lex-zet);
 	font-weight: var(--font-weight-black);
 	margin: 0;
@@ -177,24 +179,61 @@ header {
 
 nav {
 	flex: 1;
+	position: absolute;
+	top: 120px;
+	right: var(--spacing-m);
 }
 
-nav ul {
+nav ul.nav-items {
 	display: flex;
+	flex-direction: column;
 	list-style: none;
 	justify-content: flex-end;
 	margin: 0;
-	padding: 0;
+	padding: var(--spacing-l) var(--spacing-m);
+	background-color: var(--color-charcoal);
+	gap: var(--spacing-s);
+	border-radius: var(--border-radius-medium);
 }
 
-nav ul li {
-	margin-right: var(--spacing-m);
+nav ul.nav-items li {
+	display: flex;
+	flex-flow: column;
+	text-align: center;
 }
 
-nav ul li a {
+nav ul.nav-items li a {
 	color: var(--color-off-white);
 	font-family: var(--font-lex-exa);
 	text-decoration: none;
+	padding: var(--spacing-xs) var(--spacing-m);
+	border: 1px solid var(--color-off-white);
+	border-radius: var(--border-radius-full);
+}
+
+.hamburger-menu {
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+}
+
+.hamburger-menu div {
+	width: 2rem;
+	height: 0.25rem;
+	background: currentColor;
+}
+
+@media (max-width: 768px) {
+	.hamburger-menu {
+		display: flex;
+	}
+
+	#mobile-nav {
+		display: none;
+	}
 }
 
 .section-highlight {
@@ -317,8 +356,7 @@ nav ul li a {
 details {
 	width: 100%;
 	background-color: var(--color-purple-overlay);
-	padding: var(--spacing-s) var(--spacing-m);
-	transition: background-color 0.3s;
+	/* transition: background-color 0.3s; */
 }
 
 details summary {
@@ -330,8 +368,9 @@ details summary {
 	text-align: left;
 	font-family: var(--font-lex-zet);
 	font-weight: var(--font-weight-black);
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-m);
 	line-height: var(--line-height-xs);
+	letter-spacing: var(--letter-spacing-xs);
 	cursor: pointer;
 	padding: var(--spacing-s) var(--spacing-m);
 	transition: all 0.4s;
@@ -346,10 +385,14 @@ details summary span {
 	margin: 0 var(--spacing-m);
 }
 
-details summary img {
+details summary .icon {
 	width: 60px;
 	height: 60px;
 	transition: all 0.4s;
+}
+
+details summary .icon path {
+	fill: var(--color-off-white);
 }
 
 details[open] summary,
@@ -358,9 +401,12 @@ details:hover summary {
 	background-color: var(--color-off-white);
 }
 
-details[open] summary img {
-	fill: var(--color-charcoal);
+details[open] summary .icon {
 	transform: rotate(45deg);
+}
+details:hover summary .icon path,
+details[open] summary .icon path {
+	fill: var(--color-charcoal);
 }
 
 details p {
@@ -377,7 +423,6 @@ details p {
 	justify-content: center;
 	gap: var(--spacing-m);
 }
-
 .team-members li {
 	background-color: var(--color-purple-light);
 	border-radius: var(--border-radius-large);
@@ -395,12 +440,14 @@ details p {
 	width: 200px;
 	height: 200px;
 	overflow: hidden;
+	flex-basis: 200px;
 }
 
 .team-members li img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: center;
 }
 
 .team-members li .person-text {
@@ -492,6 +539,26 @@ footer a {
 
 /* Tablet & Larger */
 @media screen and (min-width: 768px) {
+	.header-wrapper .logo-text {
+		font-size: var(--font-size-l);
+		text-align: left;
+	}
+
+	nav {
+		position: static;
+		flex: 0;
+	}
+
+	nav ul.nav-items {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	nav ul.nav-items li a {
+		border: none;
+		padding: 0 var(--spacing-xs);
+	}
+
 	.hero {
 		padding: var(--spacing-xxl) var(--spacing-m);
 	}
@@ -502,6 +569,10 @@ footer a {
 
 	.section-row .image-wrapper {
 		max-height: none;
+	}
+
+	details summary {
+		font-size: var(--font-size-xl);
 	}
 
 	.team-members li {
