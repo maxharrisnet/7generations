@@ -514,7 +514,6 @@ details p {
 
 .modal-scroll::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
-	/* border-radius: var(--border-radius-small); */
 	background-color: transparent;
 }
 
@@ -524,7 +523,6 @@ details p {
 }
 
 .modal-scroll::-webkit-scrollbar-thumb {
-	/* border-radius: var(--border-radius-small); */
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 	background-color: var(--color-light-grey);
 }
