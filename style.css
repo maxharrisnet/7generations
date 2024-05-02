@@ -420,6 +420,122 @@ details p {
 	max-width: 100%;
 }
 
+
+/* Modal */
+
+/* overlay */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.17);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(4.9px);
+	-webkit-backdrop-filter: blur(4.9px);
+}
+
+/* positioning for body to stop scroll when modal is open */
+.fixed {
+	overflow: hidden;
+}
+
+.send-back {
+	z-index: unset;
+}
+
+/* Team Member Modal */
+.modal {
+	width: 90%;
+	max-width: 1200px;
+	height: fit-content;
+	max-height: 95vh;
+	margin: 0 auto;
+	padding: var(--spacing-m);
+	background: var(--color-purple-light);
+	border-radius: var(--border-radius-large);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.close-btn {
+	align-self: flex-end;
+	padding: var(--spacing-s);
+}
+
+.close-btn:hover {
+	cursor: pointer;
+}
+
+.modal-img-box {
+	margin-top: -50px;
+}
+.modal-img {
+	width: 150px;
+	height: 150px;
+	border: 5px white solid;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.modal h2 {
+	font-size: var(--font-size-m);
+	margin: 0;
+	text-align: center;
+}
+
+.modal h3 {
+	font-size: var(--font-size-s);
+	font-weight: var(--font-weight-light);
+	text-align: center;
+	padding: var(--spacing-xs);
+	background-color: rgba(0, 0, 0, 0.105);
+	border-radius: var(--border-radius-medium);
+}
+
+.modal-scroll {
+	overflow-y: scroll;
+	padding: var(--spacing-s);
+	border-radius: var(--border-radius-medium);
+	/* background-color: #7f00d6; */
+}
+
+.modal-scroll p {
+	max-width: none;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+	/* border-radius: var(--border-radius-small); */
+	background-color: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar {
+	width: 8px;
+	background-color: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+	/* border-radius: var(--border-radius-small); */
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: var(--color-light-grey);
+}
+
+.hidden {
+	display: none;
+}
+
+
+
+
 .section-form {
 	text-align: center;
 	background-color: var(--color-purple);
