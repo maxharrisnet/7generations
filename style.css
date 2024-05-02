@@ -379,7 +379,7 @@ details p {
 
 .team-members li {
 	background-color: var(--color-purple-light);
-	border-radius: var(--border-radius-medium);
+	border-radius: 20px;
 	display: flex;
 	flex-direction: row;
 	padding: var(--spacing-m);
