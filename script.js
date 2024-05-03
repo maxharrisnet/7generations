@@ -1,3 +1,13 @@
+// Hamburger Menu
+function toggleMenu() {
+	var nav = document.getElementById("mobile-nav");
+	if (nav.style.display === "none") {
+		nav.style.display = "flex";
+	} else {
+		nav.style.display = "none";
+	}
+}
+
 // JavaScript to create a continuous scrolling marquee effect
 const banners = document.querySelectorAll(".hero-banner");
 
