@@ -383,8 +383,59 @@ details p {
 .text-align {
 	text-align: center;
 	margin: 0 auto;
+	max-width: 100%;
 }
 
+/* Trish Code start */
+
+/* adding padding to the top of the project card */
+.project {
+	padding-top: var(--spacing30);
+}
+
+/* the card that holds the project */
+.card {
+	background-color: var(--background-medium-gray);
+	border-radius: var(--spacing10);
+}
+
+/* targeting the image in the card */
+.card img {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: 15px;
+	border-radius: 30px;
+}
+
+.card img:hover {
+	filter: drop-shadow(10px 10px #d3e97a);
+	transition: ease-in 0.3s;
+	border: none;
+}
+/* the details under the project card */
+.project-details {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* the links under the project card */
+.link-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: var(--spacing40);
+}
+
+.link-container a {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing10);
+}
+/* Trish code end */
+
+/* team members */
 .team-members {
 	display: flex;
 	flex-wrap: wrap;
@@ -515,4 +566,28 @@ footer a {
 	.hero {
 		padding: var(--spacing-xxl) var(--spacing-l);
 	}
+	/* Trish code start */
+
+	/* the entire section */
+	.project {
+		display: flex;
+		flex-direction: row;
+		gap: var(--spacing60);
+		margin-bottom: var(--spacing30);
+	}
+
+	/* the card on the dark gray background */
+	.card {
+		max-width: 50%;
+	}
+	/* the image on the card */
+	.card img {
+		border-radius: 30px;
+	}
+
+	/* the information write up */
+	.project-information {
+		max-width: 50%;
+	}
+	/* Trish code end */
 }
