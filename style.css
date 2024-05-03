@@ -73,6 +73,9 @@
 
 	/* Wrapper */
 	--wrapper-max-width: 1400px;
+
+	/* Transition */
+	--transition: all 0.4s ease-in-out;
 }
 
 html {
@@ -137,6 +140,42 @@ ul {
 
 ul li {
 	list-style: none;
+}
+
+.button {
+	color: var(--color-off-white);
+	background-color: var(--color-purple);
+	border: 2px solid var(--color-off-white);
+	border-radius: var(--border-radius-full);
+	font-family: var(--font-lex-exa);
+	padding: var(--spacing-s) var(--spacing-m);
+	display: inline-block;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.button.secondary {
+	background-color: var(--color-purple);
+}
+
+.button:hover {
+	background-color: var(--color-off-white);
+	color: var(--color-charcoal);
+}
+
+.button svg {
+	width: 30px;
+	height: 30px;
+	margin-left: var(--spacing-xxs);
+}
+
+.button svg path {
+	fill: var(--color-off-white);
+	transition: var(--transition);
+}
+
+.button:hover svg path {
+	fill: var(--color-charcoal);
 }
 
 .wrapper {
@@ -425,6 +464,10 @@ details p {
 	line-height: var(--line-height-m);
 	padding: var(--spacing-m) var(--spacing-l);
 	max-width: 90%;
+	text-align: right;
+}
+
+details p.h-pd {
 	text-align: left;
 }
 
@@ -480,10 +523,10 @@ details p {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
+	margin-top: var(--spacing-s);
 	padding: 15px;
 	border-radius: 30px;
-	width: 100%;
-	max-width: 80%;
+	height: 100%;
 }
 
 /* the details under the project card */
@@ -503,8 +546,15 @@ details p {
 	max-width: 100%;
 }
 
-.highlights,
 .highlights p {
+	text-align: center;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+
+.highlights h3 {
 	text-align: center;
 }
 
@@ -513,13 +563,14 @@ details p {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	gap: 40px;
+	margin-top: var(--spacing-m);
+	gap: var(--spacing-m);
 }
 
 .link-container a {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: var(--spacing-xs);
 }
 /* Trish code end */
 
@@ -837,6 +888,24 @@ footer a {
 		max-width: 50%;
 		padding-top: 12px;
 	}
+
+	.highlights {
+		padding-top: var(--spacing-xl);
+		max-width: 100%;
+	}
+
+	.highlights p {
+		text-align: left;
+		padding-left: 0;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.link-container {
+		justify-content: flex-start;
+	}
+
 	/* Trish code end */
 
 	.team-members li {
