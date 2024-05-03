@@ -435,7 +435,18 @@ details p {
 }
 
 .case-study-img {
-	width: 50%;
+	width: 80%;
+	display: flex;
+	margin: 0 auto;
+}
+
+.itlct-rm h3 {
+	text-align: center;
+}
+
+.itlct-rm p {
+	max-width: 100% !important;
+	text-align: center;
 }
 
 .text-align-pi {
@@ -450,11 +461,6 @@ details p {
 
 .details-pi {
 	background-color: transparent;
-}
-
-.details-pi p {
-	max-width: 100%;
-	text-align: right;
 }
 
 .project {
@@ -477,7 +483,7 @@ details p {
 	padding: 15px;
 	border-radius: 30px;
 	width: 100%;
-	max-width: 100%;
+	max-width: 80%;
 }
 
 /* the details under the project card */
@@ -490,6 +496,16 @@ details p {
 .h-pd {
 	text-align: left !important;
 	font-family: var(--font-lex-exa);
+}
+
+.highlights {
+	padding-top: 100px;
+	max-width: 100%;
+}
+
+.highlights,
+.highlights p {
+	text-align: center;
 }
 
 /* the links under the project card */
@@ -819,6 +835,7 @@ footer a {
 	/* the information write up */
 	.project-information {
 		max-width: 50%;
+		padding-top: 12px;
 	}
 	/* Trish code end */
 
