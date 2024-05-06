@@ -103,7 +103,7 @@ h6 {
 
 /* headings h1 - h3 using variables for font sizes, line heights, font weights, margin  */
 h1 {
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xl);
 	font-family: var(--font-lex-zet);
 	line-height: var(--line-height-xs);
 	font-weight: var(--font-weight-black);
@@ -111,7 +111,7 @@ h1 {
 }
 
 h2 {
-	font-size: var(--font-size-xxl);
+	font-size: var(--font-size-xl);
 	line-height: var(--line-height-s);
 	font-weight: var(--font-weight-black);
 	margin: var(--spacing-m) 0 var(--spacing-l);
@@ -434,12 +434,14 @@ details p {
 	justify-content: center;
 	gap: var(--spacing-m);
 }
+
 .team-members li {
 	background-color: var(--color-purple-light);
 	border-radius: var(--border-radius-large);
 	display: flex;
 	flex-direction: row;
-	padding: var(--spacing-m);
+	align-items: center;
+	padding: var(--spacing-s);
 	flex-basis: 1 1 100%;
 	flex-grow: 1;
 }
@@ -447,11 +449,11 @@ details p {
 .team-members li .image-wrapper {
 	border-radius: var(--border-radius-full);
 	border: 2px solid var(--color-off-white);
-	margin-bottom: var(--spacing-m);
-	width: 200px;
-	height: 200px;
+	width: 120px;
+	height: 120px;
+	flex-basis: 120px;
+	flex-shrink: 0;
 	overflow: hidden;
-	flex-basis: 200px;
 }
 
 .team-members li img {
@@ -464,22 +466,23 @@ details p {
 .team-members li .person-text {
 	display: flex;
 	flex-direction: column;
-	padding: var(--spacing-m) var(--spacing-l);
+	padding: 0 var(--spacing-s);
+	flex: 1;
 }
 
 .team-members li h3 {
-	font-size: var(--font-size-l);
+	font-size: var(--font-size-s);
+	line-height: var(--line-height-xs);
 	font-weight: var(--font-weight-bold);
 	margin: 0;
 }
 
 .team-members li p {
-	font-size: var(--font-size-m);
-	line-height: var(--line-height-m);
+	font-size: var(--font-size-s);
+	line-height: var(--line-height-xs);
 	margin: var(--spacing-xs) 0;
 	max-width: 100%;
 }
-
 
 /* Modal */
 
@@ -591,9 +594,6 @@ details p {
 	display: none;
 }
 
-
-
-
 .section-form {
 	text-align: center;
 	background-color: var(--color-purple);
@@ -681,13 +681,23 @@ footer a {
 	}
 
 	.team-members li {
-		flex-basis: calc(33.333% - var(--spacing-m));
+		flex-basis: calc(50% - var(--spacing-m));
+		width: calc(50% - var(--spacing-m));
+	}
+
+	.team-members li .person-text {
+		/* padding: var(--spacing-m) var(--spacing-l); */
 	}
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+	h1 {
+		font-size: var(--font-size-xxl);
+	}
+
 	h2 {
+		font-size: var(--font-size-xxl);
 		max-width: 80%;
 	}
 
@@ -721,9 +731,14 @@ footer a {
 		padding: var(--spacing-xxl) var(--spacing-l);
 	}
 
-	.team-members li {
-		flex-basis: calc(50% - var(--spacing-m));
-		/* flex-grow: 0; */
+	.team-members li .image-wrapper {
+		width: 160px;
+		height: 160px;
+		flex-basis: 160px;
+	}
+
+	.team-members li h3 {
+		font-size: var(--font-size-l);
 	}
 
 	.footer-wrapper {
