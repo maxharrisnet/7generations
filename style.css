@@ -473,7 +473,7 @@ details p.h-pd {
 
 /* Community Focus */
 .com-img {
-	width: 60%;
+	width: 100%;
 }
 
 .com-img img {
@@ -840,6 +840,7 @@ footer a {
 
 	.com-focus {
 		display: flex;
+		flex-flow: column-reverse;
 		justify-content: space-evenly;
 		margin: 0 auto;
 	}
@@ -852,13 +853,13 @@ footer a {
 	}
 
 	.com-img {
-		width: 40%;
-		flex-basis: 40%;
+		width: 80%;
+		/* flex-basis: 50%; */
 	}
 
 	.com-foc-con {
-		width: 60%;
-		flex-basis: 60%;
+		width: 80%;
+		/* flex-basis: 50%; */
 	}
 
 	.com-foc-con h2,
