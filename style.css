@@ -471,6 +471,19 @@ details p.h-pd {
 	text-align: left;
 }
 
+/* Community Focus */
+.com-img {
+	width: 60%;
+}
+
+.com-img img {
+	border-radius: 20px;
+}
+
+.com-foc-con {
+	text-align: center;
+}
+
 /* case study */
 .case-study h2 {
 	text-align: center;
@@ -821,6 +834,36 @@ footer a {
 
 	details summary {
 		font-size: var(--font-size-xl);
+	}
+
+	/* community focus */
+
+	.com-focus {
+		display: flex;
+		justify-content: space-evenly;
+		margin: 0 auto;
+	}
+
+	.com-focus img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+	.com-img {
+		width: 40%;
+		flex-basis: 40%;
+	}
+
+	.com-foc-con {
+		width: 60%;
+		flex-basis: 60%;
+	}
+
+	.com-foc-con h2,
+	.com-foc-con p {
+		max-width: 100%;
 	}
 
 	.team-members li {
