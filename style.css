@@ -315,7 +315,7 @@ nav ul.nav-items li a {
 
 .hero-banner-wrapper {
 	position: relative;
-	height: 300px;
+	height: 200px;
 }
 
 .hero-banner {
@@ -384,6 +384,10 @@ nav ul.nav-items li a {
 
 .mission {
 	padding-bottom: 150px;
+}
+
+.mission div {
+	margin: 0 auto;
 }
 
 /* Details */
@@ -834,6 +838,18 @@ footer a {
 
 	details summary {
 		font-size: var(--font-size-xl);
+	}
+
+	.mission-pic {
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.mission-pic img {
+		border-radius: 20px;
+		width: 80%;
+		margin: 0 auto;
 	}
 
 	/* community focus */
