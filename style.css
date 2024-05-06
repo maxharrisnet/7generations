@@ -684,10 +684,6 @@ footer a {
 		flex-basis: calc(50% - var(--spacing-m));
 		width: calc(50% - var(--spacing-m));
 	}
-
-	.team-members li .person-text {
-		/* padding: var(--spacing-m) var(--spacing-l); */
-	}
 }
 
 /* Desktop */
