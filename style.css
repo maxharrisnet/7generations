@@ -73,6 +73,9 @@
 
 	/* Wrapper */
 	--wrapper-max-width: 1400px;
+
+	/* Transition */
+	--transition: all 0.4s ease-in-out;
 }
 
 html {
@@ -137,6 +140,42 @@ ul {
 
 ul li {
 	list-style: none;
+}
+
+.button {
+	color: var(--color-off-white);
+	background-color: var(--color-purple);
+	border: 2px solid var(--color-off-white);
+	border-radius: var(--border-radius-full);
+	font-family: var(--font-lex-exa);
+	padding: var(--spacing-s) var(--spacing-m);
+	display: inline-block;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.button.secondary {
+	background-color: var(--color-purple);
+}
+
+.button:hover {
+	background-color: var(--color-off-white);
+	color: var(--color-charcoal);
+}
+
+.button svg {
+	width: 30px;
+	height: 30px;
+	margin-left: var(--spacing-xxs);
+}
+
+.button svg path {
+	fill: var(--color-off-white);
+	transition: var(--transition);
+}
+
+.button:hover svg path {
+	fill: var(--color-charcoal);
 }
 
 .wrapper {
@@ -276,7 +315,7 @@ nav ul.nav-items li a {
 
 .hero-banner-wrapper {
 	position: relative;
-	height: 300px;
+	height: 200px;
 }
 
 .hero-banner {
@@ -341,6 +380,10 @@ nav ul.nav-items li a {
 
 .mission {
 	padding-bottom: 150px;
+}
+
+.mission div {
+	margin: 0 auto;
 }
 
 /* Details */
@@ -421,9 +464,130 @@ details p {
 	line-height: var(--line-height-m);
 	padding: var(--spacing-m) var(--spacing-l);
 	max-width: 90%;
+	text-align: right;
+}
+
+details p.h-pd {
 	text-align: left;
 }
 
+/* Community Focus */
+.com-img {
+	width: 100%;
+}
+
+.com-img img {
+	border-radius: 20px;
+}
+
+.com-foc-con {
+	text-align: center;
+}
+
+/* case study */
+.case-study h2 {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.case-study-img {
+	width: 80%;
+	display: flex;
+	margin: 0 auto;
+}
+
+.itlct-rm h3 {
+	text-align: center;
+}
+
+.itlct-rm p {
+	max-width: 100% !important;
+	text-align: center;
+}
+
+.text-align-pi {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
+/* Trish Code start */
+
+.details-pi {
+	background-color: transparent;
+}
+
+.project {
+	padding-top: 30px;
+}
+
+.project-information {
+	max-width: 100%;
+}
+
+.card {
+	width: 100%;
+}
+
+/* targeting the image in the card */
+.card img {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	margin-top: var(--spacing-s);
+	padding: 15px;
+	border-radius: 30px;
+	height: 100%;
+}
+
+/* the details under the project card */
+.project-details {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.h-pd {
+	text-align: left !important;
+	font-family: var(--font-lex-exa);
+}
+
+.highlights {
+	padding-top: 100px;
+	max-width: 100%;
+}
+
+.highlights p {
+	text-align: center;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+
+.highlights h3 {
+	text-align: center;
+}
+
+/* the links under the project card */
+.link-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: var(--spacing-m);
+	gap: var(--spacing-m);
+}
+
+.link-container a {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-xs);
+}
+/* Trish code end */
+
+/* team members */
 .team-members {
 	display: flex;
 	flex-wrap: wrap;
@@ -676,6 +840,49 @@ footer a {
 		font-size: var(--font-size-xl);
 	}
 
+	.mission-pic {
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.mission-pic img {
+		border-radius: 20px;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	/* community focus */
+
+	.com-focus {
+		display: flex;
+		flex-flow: column-reverse;
+		justify-content: space-evenly;
+		margin: 0 auto;
+	}
+
+	.com-focus img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+	.com-img {
+		width: 80%;
+		/* flex-basis: 50%; */
+	}
+
+	.com-foc-con {
+		width: 80%;
+		/* flex-basis: 50%; */
+	}
+
+	.com-foc-con h2,
+	.com-foc-con p {
+		max-width: 100%;
+	}
+
 	.team-members li {
 		flex-basis: calc(50% - var(--spacing-m));
 		width: calc(50% - var(--spacing-m));
@@ -722,6 +929,47 @@ footer a {
 	.hero {
 		padding: var(--spacing-xxl) var(--spacing-l);
 	}
+	/* Trish code start */
+
+	/* the entire section */
+	.project {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		/* gap: 60px;
+		margin-bottom: 30px; */
+	}
+
+	/* the card on the dark gray background */
+	.card {
+		max-width: 50%;
+	}
+	/* the image on the card */
+	.card img {
+		border-radius: 30px;
+	}
+
+	/* the information write up */
+	.project-information {
+		max-width: 50%;
+		padding-top: 12px;
+	}
+
+	.highlights {
+		padding-top: var(--spacing-xl);
+		max-width: 100%;
+	}
+
+	.highlights p {
+		text-align: left;
+		padding-left: 0;
+		max-width: 100%;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/* Trish code end */
 
 	.team-members li .image-wrapper {
 		width: 160px;
