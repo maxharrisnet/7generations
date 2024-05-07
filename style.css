@@ -239,7 +239,6 @@ header {
 
 .logo-subtext {
 	display: none;
-	font-size: var(--font-size-xxs);
 }
 
 nav#mobile-nav {
@@ -973,9 +972,13 @@ footer a:hover {
 	}
 
 	.header-wrapper .logo-text {
-		font-size: var(--font-size-xl);
+		font-size: var(--font-size-l);
 		letter-spacing: var(--letter-spacing-xs);
 		text-align: left;
+	}
+
+	.logo-subtext {
+		display: inline;
 	}
 
 	nav#mobile-nav {
@@ -986,12 +989,11 @@ footer a:hover {
 	nav#mobile-nav ul.nav-items {
 		flex-direction: row;
 		padding: 0;
-		justify-content: flex-end;
 	}
 
 	nav#mobile-nav ul.nav-items li a {
 		border: none;
-		padding: 0 var(--spacing-xs);
+		padding: 0 var(--spacing-xxs);
 	}
 
 	.hero {
