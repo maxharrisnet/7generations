@@ -8,35 +8,24 @@ function toggleMenu() {
 	}
 }
 
-// JavaScript to create a continuous scrolling marquee effect
-const banners = document.querySelectorAll(".hero-banner");
+// Scrolling Banner
+const banner = document.querySelector(".hero-banner");
+const listItem = banner.querySelector("li");
+const totalWidth = listItem.offsetWidth;
 
-banners.forEach(banner => {
-	const listItems = banner.querySelectorAll("li");
-	let totalWidth = 0;
+// Set a constant speed for the marquee animation
+const speed = 65; // pixels per second
 
-	// Calculate the total width of all list items
-	listItems.forEach(item => {
-		totalWidth += item.offsetWidth;
-	});
+// Calculate the animation duration based on the total width and speed
+const duration = totalWidth / speed;
 
-	// Set a constant speed for the marquee animation
-	const speed = 100; // pixels per second
-
-	// Calculate the animation duration based on the total width and speed
-	const duration = totalWidth / speed;
-
-	listItems.forEach(item => {
-		item.style.animation = `marquee ${duration}s linear infinite`;
-		item.style.opacity = 1;
-	});
-});
+listItem.style.animation = `marquee ${duration}s linear infinite`;
+listItem.style.opacity = 1;
 
 // Team Modal
 
 // Overlay
 var overlay = document.getElementById("overlay");
-
 
 // Open modal
 var teamMembers = document.querySelectorAll(".person");
