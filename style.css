@@ -315,7 +315,7 @@ nav ul.nav-items li a {
 
 .hero-banner-wrapper {
 	position: relative;
-	height: 300px;
+	height: 200px;
 }
 
 .hero-banner {
@@ -384,6 +384,10 @@ nav ul.nav-items li a {
 
 .mission {
 	padding-bottom: 150px;
+}
+
+.mission div {
+	margin: 0 auto;
 }
 
 /* Details */
@@ -473,7 +477,7 @@ details p.h-pd {
 
 /* Community Focus */
 .com-img {
-	width: 60%;
+	width: 100%;
 }
 
 .com-img img {
@@ -840,10 +844,23 @@ footer a {
 		font-size: var(--font-size-xl);
 	}
 
+	.mission-pic {
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.mission-pic img {
+		border-radius: 20px;
+		width: 80%;
+		margin: 0 auto;
+	}
+
 	/* community focus */
 
 	.com-focus {
 		display: flex;
+		flex-flow: column-reverse;
 		justify-content: space-evenly;
 		margin: 0 auto;
 	}
@@ -856,13 +873,13 @@ footer a {
 	}
 
 	.com-img {
-		width: 40%;
-		flex-basis: 40%;
+		width: 80%;
+		/* flex-basis: 50%; */
 	}
 
 	.com-foc-con {
-		width: 60%;
-		flex-basis: 60%;
+		width: 80%;
+		/* flex-basis: 50%; */
 	}
 
 	.com-foc-con h2,
