@@ -367,9 +367,8 @@ nav ul.nav-items li a {
 	display: flex;
 	flex-flow: column;
 	justify-content: space-around;
-	align-items: center;
-	padding: var(--spacing-xxl) var(--spacing-xl);
-	gap: var(--spacing-xl);
+	padding: var(--spacing-xxl) 0;
+	gap: var(--spacing-xxl);
 }
 
 .section-row h2 {
@@ -389,11 +388,7 @@ nav ul.nav-items li a {
 }
 
 .mission {
-	padding-bottom: 150px;
-}
-
-.mission div {
-	margin: 0 auto;
+	padding-bottom: var(--spacing-xxxl);
 }
 
 /* Details */
@@ -401,6 +396,10 @@ nav ul.nav-items li a {
 	background-color: var(--color-purple);
 	color: var(--color-off-white);
 	text-align: center;
+}
+
+.section-details p {
+	text-align: left;
 }
 
 .details-wrapper {
@@ -473,8 +472,8 @@ details p {
 	font-size: var(--font-size-m);
 	line-height: var(--line-height-m);
 	padding: var(--spacing-m) var(--spacing-l);
+	margin: 0;
 	max-width: 90%;
-	/* text-align: right; */
 }
 
 details p.h-pd {
@@ -488,10 +487,6 @@ details p.h-pd {
 
 .com-img img {
 	border-radius: 20px;
-}
-
-.com-foc-con {
-	text-align: center;
 }
 
 /* case study */
@@ -509,14 +504,8 @@ details p.h-pd {
 .case-study details summary {
 	text-transform: uppercase;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 0 auto var(--spacing-m);
 	max-width: 420px;
-}
-
-.case-study-img {
-	/* width: 80%;
-	display: flex;
-	margin: 0 auto; */
 }
 
 .itlct-rm h3 {
@@ -528,18 +517,16 @@ details p.h-pd {
 	text-align: center;
 }
 
-.text-align-pi {
-	text-align: center;
-	margin: 0 auto;
-	max-width: 100%;
-	padding-top: 60px;
-	padding-bottom: 20px;
-}
-
 /* Trish Code start */
 
 .details-pi {
 	background-color: transparent;
+}
+
+.details-pi h3 {
+	text-align: left;
+	margin-bottom: 0;
+	margin: var(--spacing-xxl) var(--spacing-m) 0 var(--spacing-m);
 }
 
 .project {
@@ -575,6 +562,7 @@ details p.h-pd {
 .h-pd {
 	text-align: left !important;
 	font-family: var(--font-lex-exa);
+	line-height: var(--line-height-xs);
 }
 
 .highlights {
@@ -885,8 +873,7 @@ footer a {
 	}
 
 	.mission-pic img {
-		border-radius: 20px;
-		width: 80%;
+		border-radius: var(--border-radius-large);
 		margin: 0 auto;
 	}
 
@@ -894,7 +881,7 @@ footer a {
 
 	.com-focus {
 		display: flex;
-		flex-flow: column-reverse;
+		flex-flow: row;
 		justify-content: space-evenly;
 		margin: 0 auto;
 	}
@@ -908,12 +895,10 @@ footer a {
 
 	.com-img {
 		width: 80%;
-		/* flex-basis: 50%; */
 	}
 
 	.com-foc-con {
 		width: 80%;
-		/* flex-basis: 50%; */
 	}
 
 	.com-foc-con h2,
@@ -935,11 +920,11 @@ footer a {
 
 	h2 {
 		font-size: var(--font-size-xxl);
-		max-width: 80%;
+		max-width: 90%;
 	}
 
 	p {
-		max-width: 70%;
+		max-width: 80%;
 	}
 
 	.header-wrapper .logo-text {
