@@ -583,7 +583,7 @@ details p {
 .details-pi h3 {
 	text-align: left;
 	margin-bottom: 0;
-	margin: var(--spacing-l) var(--spacing-m);
+	margin: var(--spacing-l) var(--spacing-s);
 }
 
 .project {
@@ -620,6 +620,7 @@ details p {
 	text-align: left !important;
 	font-family: var(--font-lex-exa);
 	line-height: var(--line-height-xs);
+	padding: var(--spacing-m) var(--spacing-xs);
 }
 
 .highlights {
@@ -801,7 +802,7 @@ details p {
 	font-size: var(--font-size-s);
 	font-weight: var(--font-weight-light);
 	text-align: center;
-	padding: var(--spacing-xs);
+	padding: var(--spacing-xs) var(--spacing-m);
 	background-color: rgba(0, 0, 0, 0.105);
 	border-radius: var(--border-radius-medium);
 }
@@ -815,6 +816,8 @@ details p {
 
 .modal-scroll p {
 	max-width: none;
+	font-size: var(--font-size-s);
+	line-height: var(--line-height-s);
 }
 
 .modal-scroll::-webkit-scrollbar-track {
@@ -1083,6 +1086,7 @@ footer a:hover {
 
 	.project-details {
 		flex-direction: row;
+		align-items: center;
 	}
 
 	/* the information write up */
