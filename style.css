@@ -811,7 +811,6 @@ details p {
 	overflow-y: scroll;
 	padding: var(--spacing-s);
 	border-radius: var(--border-radius-medium);
-	/* background-color: #7f00d6; */
 }
 
 .modal-scroll p {
@@ -861,6 +860,12 @@ details p {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.heading-centered h2 {
+	max-width: 90%;
+}
+.heading-centered p {
 	max-width: 80%;
 }
 
