@@ -11,10 +11,10 @@ function toggleMenu() {
 // Scrolling Banner
 const banner = document.querySelector(".hero-banner");
 const listItem = banner.querySelector("li");
-const totalWidth = listItem.offsetWidth;
+const totalWidth = banner.offsetWidth;
 
 // Set a constant speed for the marquee animation
-const speed = 65; // pixels per second
+const speed = 30; // pixels per second
 
 // Calculate the animation duration based on the total width and speed
 const duration = totalWidth / speed;

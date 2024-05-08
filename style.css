@@ -372,7 +372,7 @@ nav#mobile-nav ul.nav-items li a {
 /* Banner Animation */
 @keyframes marquee {
 	0% {
-		transform: translateX(0%);
+		transform: translateX(-65%);
 	}
 	100% {
 		transform: translateX(100%);
@@ -425,6 +425,9 @@ section {
 
 .section-details p {
 	text-align: left;
+	line-height: var(--line-height-s);
+	padding: var(--spacing-s);
+	max-width: none;
 }
 
 .details-wrapper {
@@ -494,14 +497,35 @@ details[open] summary .icon path {
 	fill: var(--color-charcoal);
 }
 
-details p {
-	line-height: var(--line-height-m);
-	padding: var(--spacing-m) var(--spacing-l);
-	margin: 0;
+.text-image-row {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
-details p.h-pd {
-	/* text-align: left; */
+.text-image-row > div {
+	padding-top: var(--spacing-m);
+}
+
+.text-image-row svg {
+	opacity: 0.2;
+	width: 120px;
+	height: auto;
+	position: absolute;
+	bottom: var(--spacing-m);
+	right: 0;
+}
+
+.text-image-row svg path {
+	fill: var(--color-purple-dark);
+}
+
+details p {
+	line-height: var(--line-height-m);
+	padding: 0 var(--spacing-l);
+	margin: 0;
 }
 
 /* Community Focus */
@@ -516,6 +540,7 @@ details p.h-pd {
 /* case study */
 
 .case-study.wrapper {
+	background-color: var(--color-purple-dark);
 	border: 2px solid var(--color-off-white);
 	border-radius: var(--border-radius-large);
 }
@@ -529,7 +554,13 @@ details p.h-pd {
 	text-transform: uppercase;
 	justify-content: center;
 	margin: 0 var(--spacing-l);
+	background-color: var(--color-charcoal);
 	max-width: 420px;
+}
+
+.case-study details summary:hover,
+.case-study details[open] summary {
+	background-color: var(--color-off-white);
 }
 
 .itlct-rm h3 {
@@ -650,6 +681,7 @@ details p.h-pd {
 	align-items: center;
 	padding: var(--spacing-m) var(--spacing-s);
 	flex: 1 1 100%;
+	cursor: pointer;
 }
 
 .team-members li .image-wrapper {
@@ -702,7 +734,7 @@ details p.h-pd {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	/* From https://css.glass */
+	cursor: pointer;
 	background: rgba(255, 255, 255, 0.17);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(4.9px);
@@ -728,11 +760,11 @@ details p.h-pd {
 	padding: var(--spacing-m);
 	background: var(--color-purple-light);
 	border-radius: var(--border-radius-large);
+	border: 5px solid var(--color-purple-dark);
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -826,6 +858,7 @@ details p.h-pd {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	max-width: 80%;
 }
 
 .footer-wrapper {
@@ -898,8 +931,18 @@ footer a:hover {
 		margin: 0 auto;
 	}
 
+	.text-image-row {
+		flex-direction: row;
+		padding: 0 var(--spacing-m);
+		gap: var(--spacing-m);
+	}
+
+	.text-image-row > div {
+		padding: var(--spacing-l) 0;
+	}
+
 	details p {
-		padding: var(--spacing-m) var(--spacing-l);
+		padding: 0 var(--spacing-s);
 	}
 
 	.link-container {
@@ -1019,6 +1062,10 @@ footer a:hover {
 		max-width: none;
 	}
 
+	.case-study.wrapper {
+		padding: var(--spacing-xxl) var(--spacing-xxl);
+	}
+
 	.project {
 		display: flex;
 		flex-direction: row;
@@ -1032,6 +1079,10 @@ footer a:hover {
 	/* the image on the card */
 	.card img {
 		border-radius: 30px;
+	}
+
+	.project-details {
+		flex-direction: row;
 	}
 
 	/* the information write up */
@@ -1064,6 +1115,16 @@ footer a:hover {
 
 	.details-wrapper {
 		padding: var(--spacing-xl) var(--spacing-xxl);
+	}
+
+	.text-image-row {
+		max-width: 85%;
+		margin: 0 auto;
+	}
+
+	.text-image-row svg {
+		position: static;
+		width: 160px;
 	}
 
 	.team-members li {
