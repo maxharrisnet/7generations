@@ -226,7 +226,7 @@ header {
 .header-wrapper .logo-text {
 	font-size: var(--font-size-xxs);
 	font-family: var(--font-lex-zet);
-	font-weight: var(--font-weight-black);
+	font-weight: var(--font-weight-medium);
 	text-align: left;
 	margin: 0;
 }
@@ -968,35 +968,6 @@ footer a:hover {
 		margin: 0 auto;
 	}
 
-	/* community focus */
-
-	.com-focus {
-		display: flex;
-		flex-flow: row;
-		justify-content: space-evenly;
-		margin: 0 auto;
-	}
-
-	.com-focus img {
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-		border-radius: 20px;
-	}
-
-	.com-img {
-		width: 80%;
-	}
-
-	.com-foc-con {
-		width: 80%;
-	}
-
-	.com-foc-con h2,
-	.com-foc-con p {
-		max-width: 100%;
-	}
-
 	.team-members li {
 		flex-basis: calc(50% - var(--spacing-m));
 		width: calc(50% - var(--spacing-m));
@@ -1070,6 +1041,35 @@ footer a:hover {
 		max-width: none;
 	}
 
+	/* community focus */
+
+	.com-focus {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-evenly;
+		margin: 0 auto;
+	}
+
+	.com-focus img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		border-radius: 20px;
+	}
+
+	.com-img {
+		width: 80%;
+	}
+
+	.com-foc-con {
+		width: 80%;
+	}
+
+	.com-foc-con h2,
+	.com-foc-con p {
+		max-width: 100%;
+	}
+
 	.case-study.wrapper {
 		padding: var(--spacing-xxl) var(--spacing-xxl);
 	}
@@ -1092,6 +1092,10 @@ footer a:hover {
 	.project-details {
 		flex-direction: row;
 		align-items: center;
+	}
+
+	.details-p {
+		text-align: right;
 	}
 
 	/* the information write up */
@@ -1136,6 +1140,17 @@ footer a:hover {
 		width: 160px;
 	}
 
+	.po-ptag {
+		max-width: 100%;
+	}
+
+	.footer-wrapper {
+		flex-flow: row;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 1145px) {
 	.team-members li {
 		flex-direction: row;
 		gap: var(--spacing-xs);
@@ -1154,10 +1169,5 @@ footer a:hover {
 
 	.team-members li h3 {
 		font-size: var(--font-size-l);
-	}
-
-	.footer-wrapper {
-		flex-flow: row;
-		justify-content: space-between;
 	}
 }
