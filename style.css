@@ -869,6 +869,22 @@ details p {
 	max-width: 80%;
 }
 
+form.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
+}
+
+/*  style all text-based inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+	border: 1px solid var(--color-off-white);
+	border-radius: var(--border-radius-medium);
+	padding: var(--spacing-xs);
+}
+
 .footer-wrapper {
 	display: flex;
 	flex-flow: column;
