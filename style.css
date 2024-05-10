@@ -885,6 +885,22 @@ textarea {
 	padding: var(--spacing-xs);
 }
 
+.form-btn {
+	width: 30%;
+	margin: 0 auto;
+	font-size: var(--font-size-xxl);
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.form-btn svg {
+	padding-left: 5px;
+	height: 100%;
+	width: 20%;
+	padding-top: 5px;
+}
+
 .footer-wrapper {
 	display: flex;
 	flex-flow: column;
