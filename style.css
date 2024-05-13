@@ -869,6 +869,46 @@ details p {
 	max-width: 80%;
 }
 
+form.contact-form {
+	max-width: 600px;
+    margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
+}
+
+/*  style all text-based inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+	border: 1px solid var(--color-off-white);
+	border-radius: var(--border-radius-medium);
+	padding: var(--spacing-xs);
+}
+label {
+	display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 28px;
+}
+
+.form-btn {
+	margin: 0 auto;
+	font-size: var(--font-size-l);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.form-btn svg {
+	padding-left: 5px;
+	height: 100%;
+	width: 20%;
+	padding-top: 5px;
+}
+
 .footer-wrapper {
 	display: flex;
 	flex-flow: column;
