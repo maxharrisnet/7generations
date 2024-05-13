@@ -897,7 +897,7 @@ label {
 	margin: 0 auto;
 	font-size: var(--font-size-l);
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	text-align: center;
 }
