@@ -871,7 +871,7 @@ details p {
 
 form.contact-form {
 	max-width: 600px;
-    margin: 30px auto;
+    margin: var(--spacing-l) auto;
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-xl);
@@ -889,8 +889,8 @@ textarea {
 label {
 	display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 28px;
+    gap: var(--spacing-s);
+    font-size: var(--font-size-m);
 }
 
 .form-btn {
