@@ -607,7 +607,7 @@ details p {
 	margin-top: var(--spacing-s);
 	padding: 15px;
 	border-radius: 30px;
-	height: 100%;
+	height: auto;
 }
 
 /* the details under the project card */
