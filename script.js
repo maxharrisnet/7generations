@@ -14,12 +14,15 @@ const listItem = banner.querySelector("li");
 const totalWidth = banner.offsetWidth;
 
 // Set a constant speed for the marquee animation
-const speed = 30; // pixels per second
+const speed = 40; // pixels per second
 
 // Calculate the animation duration based on the total width and speed
 const duration = totalWidth / speed;
 
+// Apply the marquee animation to the listItem element
 listItem.style.animation = `marquee ${duration}s linear infinite`;
+
+// Make the listItem element fully opaque (visible)
 listItem.style.opacity = 1;
 
 // Team Modal

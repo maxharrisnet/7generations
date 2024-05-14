@@ -352,6 +352,7 @@ nav#mobile-nav ul.nav-items li a {
 	align-items: center;
 	justify-content: flex-start;
 	position: relative;
+	overflow: hidden; /* Ensure content doesn't overflow horizontally */
 }
 
 .hero-banner ul li {
@@ -372,10 +373,10 @@ nav#mobile-nav ul.nav-items li a {
 /* Banner Animation */
 @keyframes marquee {
 	0% {
-		transform: translateX(-65%);
+		transform: translateX(100%);
 	}
 	100% {
-		transform: translateX(100%);
+		transform: translateX(-340%); /* Adjust the value to include margin */
 	}
 }
 
@@ -871,7 +872,7 @@ details p {
 
 form.contact-form {
 	max-width: 600px;
-    margin: var(--spacing-l) auto;
+	margin: var(--spacing-l) auto;
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-xl);
@@ -888,9 +889,9 @@ textarea {
 }
 label {
 	display: flex;
-    flex-direction: column;
-    gap: var(--spacing-s);
-    font-size: var(--font-size-m);
+	flex-direction: column;
+	gap: var(--spacing-s);
+	font-size: var(--font-size-m);
 }
 
 .form-btn {
