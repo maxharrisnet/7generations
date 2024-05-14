@@ -923,6 +923,10 @@ label {
 	gap: var(--spacing-s);
 }
 
+.footer-logo {
+	width: 30px;
+}
+
 footer span {
 	font-size: var(--font-size-xxs);
 	font-weight: var(--font-weight-light);
